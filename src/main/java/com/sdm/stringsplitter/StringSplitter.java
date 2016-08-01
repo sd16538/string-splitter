@@ -47,7 +47,7 @@ class StringSplitter {
         return result;
     }
 
-    //TODO simplify
+    //TODO simplify. Is this better than WordUtil wordwrap impl?
     private ValidBreakpoint getValidBreakpointForNewline(String text) {
         ValidBreakpoint validBreakpoint;
         int textLength = text.length();

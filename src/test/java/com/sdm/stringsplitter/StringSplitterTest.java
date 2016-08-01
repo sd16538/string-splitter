@@ -36,7 +36,6 @@ public class StringSplitterTest {
     @Test
     public void shouldReturnListWithSplitsBasedOnSpecifiedLimit() {
         StringSplitter splitter = new StringSplitter(5);
-        System.out.println(WordUtils.wrap("Hello you", 5));
         List<String> splitStrings = splitter.split("Hello you");
         assertThat(splitStrings.size(), is(2));
         assertThat(splitStrings, contains("Hello", "you"));
