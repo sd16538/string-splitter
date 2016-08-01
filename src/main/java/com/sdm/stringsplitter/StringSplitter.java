@@ -29,7 +29,9 @@ class StringSplitter {
         do {
             validBreakpoint = getValidBreakpointForNewline(remainder);
             substring = remainder.substring(ROW_START, validBreakpoint.getBreakpoint());
-            remainder = remainder.substring(substring.length()).trim();
+            remainder = remainder
+                    .substring(substring.length())
+                    .trim();
 
             if (validBreakpoint.isHyphenated()) {
                 result.add(substring.trim() + "-");
@@ -45,6 +47,7 @@ class StringSplitter {
         return result;
     }
 
+    //TODO simplify
     private ValidBreakpoint getValidBreakpointForNewline(String text) {
         ValidBreakpoint validBreakpoint;
         int textLength = text.length();
